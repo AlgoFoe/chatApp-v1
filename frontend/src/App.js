@@ -5,7 +5,7 @@ import axios from 'axios';
 import Chat from './components/Chat';
 
 function App() {
-  axios.defaults.baseURL = 'http://localhost:7001'
+  axios.defaults.baseURL = 'https://chatapp-ayim.onrender.com'
   axios.defaults.withCredentials = true;
   const {username,id} = useContext(UserContext);
   if(username){
