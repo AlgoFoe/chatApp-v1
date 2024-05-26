@@ -19,7 +19,7 @@ function Chat() {
   const scrollRef = useRef();
 
   useEffect(() => {
-    const ws = new WebSocket("ws://chatapp-ayim.onrender.com");
+    const ws = new WebSocket("ws://chatapp-production-8f10.up.railway.app");
     ws.addEventListener("open", () => setSocketCon(ws));
     ws.addEventListener("message", handleMsg);
     ws.addEventListener("close", () => {
@@ -34,7 +34,7 @@ function Chat() {
   }, []);
 
   function autoReconn() {
-    const ws = new WebSocket("ws://chatapp-ayim.onrender.com");
+    const ws = new WebSocket("ws://chatapp-production-8f10.up.railway.app");
     setSocketCon(ws);
     ws.addEventListener("message", handleMsg);
     ws.addEventListener("close", () => {
